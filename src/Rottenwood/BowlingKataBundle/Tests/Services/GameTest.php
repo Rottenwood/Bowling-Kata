@@ -36,7 +36,7 @@ class GameTest extends \PHPUnit_Framework_TestCase
 
         $score = $this->game->score();
 
-        $this->assertEquals(10, $score);
+        $this->assertEquals(20, $score);
     }
 
     private function createGame()
@@ -46,7 +46,7 @@ class GameTest extends \PHPUnit_Framework_TestCase
 
     private function givenGameIsFinishedAndOnePinKnockedEachRound()
     {
-        for ($i = 0; $i < self::NUMBER_OF_FRAMES; $i++) {
+        for ($i = 0; $i < self::NUMBER_OF_FRAMES * 2; $i++) {
             $this->game->roll(1);
         }
     }
